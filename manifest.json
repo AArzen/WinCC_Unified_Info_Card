@@ -18,13 +18,93 @@
                 "methods": {},
                 "events": {},
                 "properties": {
-                    "TitleText": {
+                    "Front_Title": {
                         "type": "string",
                         "default": "Machine Info"
                     },
-                    "DescriptionText": {
+                    "Front_text_1": {
                         "type": "string",
-                        "default": "This machine is currently running."
+                        "default": "Machine data"
+                    },
+                    "Front_text_2": {
+                        "type": "string",
+                        "default": ""
+                    },
+                    "Front_text_3": {
+                        "type": "string",
+                        "default": ""
+                    },
+                    "Front_text_4": {
+                        "type": "string",
+                        "default": ""
+                    },
+                    "Front_text_5": {
+                        "type": "string",
+                        "default": ""
+                    },
+                    "Front_text_6": {
+                        "type": "string",
+                        "default": ""
+                    },
+                    "Front_text_7": {
+                        "type": "string",
+                        "default": ""
+                    },
+                    "Front_text_8": {
+                        "type": "string",
+                        "default": ""
+                    },
+                    "Front_text_9": {
+                        "type": "string",
+                        "default": ""
+                    },
+                    "Front_text_10": {
+                        "type": "string",
+                        "default": ""
+                    },
+                    "Back_Title": {
+                        "type": "string",
+                        "default": "Program Info"
+                    },
+                    "Back_text_1": {
+                        "type": "string",
+                        "default": "Program data"
+                    },
+                    "Back_text_2": {
+                        "type": "string",
+                        "default": ""
+                    },
+                    "Back_text_3": {
+                        "type": "string",
+                        "default": ""
+                    },
+                    "Back_text_4": {
+                        "type": "string",
+                        "default": ""
+                    },
+                    "Back_text_5": {
+                        "type": "string",
+                        "default": ""
+                    },
+                    "Back_text_6": {
+                        "type": "string",
+                        "default": ""
+                    },
+                    "Back_text_7": {
+                        "type": "string",
+                        "default": ""
+                    },
+                    "Back_text_8": {
+                        "type": "string",
+                        "default": ""
+                    },
+                    "Back_text_9": {
+                        "type": "string",
+                        "default": ""
+                    },
+                    "Back_text_10": {
+                        "type": "string",
+                        "default": ""
                     },
                     "CardColor": {
                         "$ref": "#/control/types/Color",
@@ -40,7 +120,7 @@
                     },
                     "Height": {
                         "type": "number",
-                        "default": 180
+                        "default": 300
                     },
                     "FontSize": {
                         "type": "number",
