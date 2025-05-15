@@ -1,0 +1,59 @@
+{
+    "mver": "1.2.0",
+    "control": {
+        "identity": {
+            "name": "Info_Card",
+            "version": "1.0",
+            "displayname": "Info_Card",
+            "icon": "./assets/Info_Card.png",
+            "type": "guid://57F3DEA5-91FC-4DC7-AF09-530F387DAD29",
+            "start": "./control/index.html"
+        },
+        "metadata": {
+            "author": "AArzen",
+            "keywords": []
+        },
+        "contracts": {
+            "api": {
+                "methods": {},
+                "events": {},
+                "properties": {
+                    "TitleText": {
+                        "type": "string",
+                        "default": "Machine Info"
+                    },
+                    "DescriptionText": {
+                        "type": "string",
+                        "default": "This machine is currently running."
+                    },
+                    "CardColor": {
+                        "$ref": "#/control/types/Color",
+                        "default": 4280468723
+                    },
+                    "TextColor": {
+                        "$ref": "#/control/types/Color",
+                        "default": 4294967295
+                    },
+                    "Width": {
+                        "type": "number",
+                        "default": 300
+                    },
+                    "Height": {
+                        "type": "number",
+                        "default": 180
+                    },
+                    "FontSize": {
+                        "type": "number",
+                        "default": 16
+                    }
+                }
+            }
+        },
+        "types": {
+            "Color": {
+                "$id": "http://tia.siemens.com/wincc-unified/types/s/color",
+                "type": "number"
+            }
+        }
+    }
+}
