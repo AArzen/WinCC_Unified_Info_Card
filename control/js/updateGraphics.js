@@ -30,7 +30,8 @@ function update() {
     const props = WebCC?.Properties ?? {};
 
     // Read visual parameters from WinCC Unified properties
-    const bgColor = toColor(props.CardColor ?? 4280468723);
+    const bgColor1 = toColor(props.CardColor_1 ?? 4287130174);
+    const bgColor2 = toColor(props.CardColor_2 ?? 4291408653);
     const txtColor = toColor(props.TextColor ?? 4294967295);
     const width = props.Width ?? 300;
     const height = props.Height ?? 300;
@@ -60,7 +61,8 @@ function update() {
     const backText10_Content = props.Back_text_10 ?? "Text";
 
     // Apply CSS variables (used in style.css)
-    document.documentElement.style.setProperty('--card-color', bgColor);
+    document.documentElement.style.setProperty('--card-color1', bgColor1);
+    document.documentElement.style.setProperty('--card-color2', bgColor2);
     document.documentElement.style.setProperty('--text-color', txtColor);
     document.documentElement.style.setProperty('--card-width', width + "px");
     document.documentElement.style.setProperty('--card-height', height + "px");

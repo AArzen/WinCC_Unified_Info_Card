@@ -1,5 +1,6 @@
 :root {
-    --card-color: #f0f0f0;
+    --card-color1: #8cc63e;
+    --card-color2: #c0ff8d;
     --text-color: #000000;
     --font-size: 16px;
     --card-width: 300px;
@@ -37,7 +38,7 @@ body {
     transition: transform 1s;
     transform-style: preserve-3d;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    background-color: var(--card-color);
+    /*background-color: var(--card-color);*/
     color: var(--text-color);
     font-size: var(--font-size);
     display: flex;
@@ -71,7 +72,8 @@ body {
     align-items: center;
     gap: 10px;
     padding: 10px;
-    background: linear-gradient(-135deg, #8CC63E, #c0ff8d);
+    background: linear-gradient(-135deg, var(--card-color1), var(--card-color2));
+    /*background: linear-gradient(-135deg, #8cc63e, #c0ff8d);*/
     color: var(--text-color);
     font-family: 'Lato', sans-serif;
 }
@@ -85,9 +87,15 @@ body {
     font-size: calc(var(--font-size) * 1.4);
     font-weight: bold;
     text-align: center;
+    word-break: break-word;
+    white-space: normal;
+    max-width: 98%;
 }
 
 .card-description {
     font-size: var(--font-size);
     text-align: center;
+    word-break: break-word;
+    white-space: normal;
+    max-width: 98%;
 }

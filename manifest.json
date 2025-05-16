@@ -106,9 +106,13 @@
                         "type": "string",
                         "default": ""
                     },
-                    "CardColor": {
+                    "CardColor_1": {
                         "$ref": "#/control/types/Color",
-                        "default": 4280468723
+                        "default": 4287130174
+                    },
+                    "CardColor_2": {
+                        "$ref": "#/control/types/Color",
+                        "default": 4291408653
                     },
                     "TextColor": {
                         "$ref": "#/control/types/Color",
