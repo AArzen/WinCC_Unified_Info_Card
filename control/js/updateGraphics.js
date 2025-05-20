@@ -22,6 +22,8 @@ function update() {
     const backText9 = document.getElementById("backText9")
     const backText10 = document.getElementById("backText10")
 
+    //console.log("📲 Update document 4");
+
     const card = document.getElementById("infoCard");
     const container = document.getElementById("cardContainer");
 
@@ -92,22 +94,30 @@ function update() {
     backText8.innerText = backText8_Content;
     backText9.innerText = backText9_Content;
     backText10.innerText = backText10_Content;
-
-    // --- Add touch/click flip support ---
-    // Remove previous listener (cloneNode hack to avoid duplicate listeners)
-    const newContainer = container.cloneNode(true);
-    container.parentNode.replaceChild(newContainer, container);
-
-    // Re-link new elements after cloning
-    const newCard = newContainer.querySelector("#infoCard");
-
-    // Attach click event for touch interaction
-    if (newCard) {
-        newContainer.addEventListener("click", () => {
-            newCard.classList.toggle("flipped");
-        });
-    }
 }
+
+window.update = update;
+
+// Touch detection for mixed-input devices (e.g. industrial PCs with touch + mouse)
+window.addEventListener("touchstart", function onFirstTouch() {
+
+    console.log("📲 Touchstart detected!");
+
+    const card = document.getElementById("infoCard");
+    const container = document.getElementById("cardContainer");
+
+    if (card && container && !card.classList.contains("flip-bound")) {
+        card.addEventListener("click", () => {
+            const isNowFlipped = card.classList.toggle("flipped");
+            console.log("FLIP triggered. New state:", isNowFlipped ? "BACK" : "FRONT");
+            //console.log("📲 new Touchstart detected!");
+            //card.classList.toggle("flipped");
+        });
+        card.classList.add("flip-bound");
+    }
+
+    window.removeEventListener("touchstart", onFirstTouch, false);
+}, false);
 
 // Converts 32-bit WinCC Unified color to rgba
 function toColor(num) {
@@ -118,5 +128,3 @@ function toColor(num) {
     const a = ((num >>> 24) & 0xff) / 255;
     return `rgba(${r}, ${g}, ${b}, ${a})`;
 }
-
-window.update = update;

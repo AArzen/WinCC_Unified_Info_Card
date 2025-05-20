@@ -48,7 +48,7 @@ body {
 }
 
 /* Hover flip for mouse users */
-.container:hover>.card {
+.container:hover>.card:not(.flipped) {
     transform: rotateY(180deg) rotateZ(180deg);
     cursor: pointer;
 }
@@ -73,9 +73,9 @@ body {
     gap: 10px;
     padding: 10px;
     background: linear-gradient(-135deg, var(--card-color1), var(--card-color2));
-    /*background: linear-gradient(-135deg, #8cc63e, #c0ff8d);*/
     color: var(--text-color);
     font-family: 'Lato', sans-serif;
+    pointer-events: none;
 }
 
 .back {
