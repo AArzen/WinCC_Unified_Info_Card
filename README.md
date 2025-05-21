@@ -7,7 +7,9 @@
 ## 🚀 Features
 
 - Supports up to **10 text lines and 1 title** per side (front and back)
-- Dynamic 3D **flip animation** on hover (mouse) or click (touch screen)
+- Dynamic 3D **flip animation**:
+  - On **mouse hover** (for desktop users)
+  - On **tap/click** (for touch screens and industrial panels)
 - Fully customizable via WinCC Unified properties:
   - Card width & height
   - Font size
@@ -22,6 +24,7 @@
 
 - ❌ No runtime events (read-only display control)
 - ❌ May not fit tightly in minimal CWC containers due to flip effect needing extra space
+- 📱 On **touch devices**, the card does **not flip on hover** — instead, users must **tap the card to flip it**
 - 🔐 **Free to use**, modify, and distribute — but **reselling is strictly prohibited**
 
 ---

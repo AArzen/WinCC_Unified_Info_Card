@@ -48,8 +48,12 @@ body {
 }
 
 /* Hover flip for mouse users */
-.container:hover>.card:not(.flipped) {
+body:not(.touch-mode) .container:hover>.card:not(.flipped) {
     transform: rotateY(180deg) rotateZ(180deg);
+    cursor: pointer;
+}
+
+.front {
     cursor: pointer;
 }
 

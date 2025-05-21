@@ -22,8 +22,6 @@ function update() {
     const backText9 = document.getElementById("backText9")
     const backText10 = document.getElementById("backText10")
 
-    //console.log("📲 Update document 4");
-
     const card = document.getElementById("infoCard");
     const container = document.getElementById("cardContainer");
 
@@ -98,26 +96,26 @@ function update() {
 
 window.update = update;
 
-// Touch detection for mixed-input devices (e.g. industrial PCs with touch + mouse)
 window.addEventListener("touchstart", function onFirstTouch() {
-
-    console.log("📲 Touchstart detected!");
-
+    document.body.classList.add("touch-mode");
     const card = document.getElementById("infoCard");
-    const container = document.getElementById("cardContainer");
-
-    if (card && container && !card.classList.contains("flip-bound")) {
+    if (card && !card.classList.contains("flip-bound")) {
         card.addEventListener("click", () => {
             const isNowFlipped = card.classList.toggle("flipped");
-            console.log("FLIP triggered. New state:", isNowFlipped ? "BACK" : "FRONT");
-            //console.log("📲 new Touchstart detected!");
-            //card.classList.toggle("flipped");
+            //console.log("FLIP triggered. New state:", isNowFlipped ? "BACK" : "FRONT");
         });
         card.classList.add("flip-bound");
     }
-
-    window.removeEventListener("touchstart", onFirstTouch, false);
+    window.removeEventListener("touchstart", onFirstTouch);
 }, false);
+
+document.addEventListener("click", (e) => {
+    const card = document.getElementById("infoCard");
+    if (card && !e.target.closest(".card") && card.classList.contains("flipped")) {
+        card.classList.remove("flipped");
+        //console.log("Clicked outside — flip reset");
+    }
+});
 
 // Converts 32-bit WinCC Unified color to rgba
 function toColor(num) {
